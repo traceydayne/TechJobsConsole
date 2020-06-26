@@ -71,19 +71,13 @@ namespace TechJobsConsole
                 {
                     foreach (KeyValuePair<string, string> item in job)
                     {
-                        string compKey = item.Key.ToString().ToLower();
                         string compVal = item.Value.ToString().ToLower();
-                        if (!jobs.Contains(job)&& compKey.Contains(value.ToLower()))
-                        {
-                            jobs.Add(job);
-                        } else if (!jobs.Contains(job) && compVal.Contains(value))
+                        if (!jobs.Contains(job) && compVal.Contains(value))
                         {
                             jobs.Add(job);
                         }
                     }
                 }
-
-
             }
             return jobs;
         }

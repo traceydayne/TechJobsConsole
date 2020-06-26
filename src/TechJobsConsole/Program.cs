@@ -123,15 +123,20 @@ namespace TechJobsConsole
 
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
+            int jobCount = 0;
             for (int i=0; i < someJobs.Count; i++)
             {
                 
                 foreach (KeyValuePair<string,string> job in someJobs[i])
                 {
                     Console.WriteLine(job.Key+":"+job.Value+"\n");
+                    
                 }
+                jobCount++;
+
                 Console.WriteLine("*****************");
             }
+            Console.WriteLine("Number of jobs found:" + jobCount);
         }
     }
 }
